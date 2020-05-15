@@ -1,5 +1,12 @@
 html {
+    box-sizing: border-box;
     height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
 body {
@@ -40,4 +47,28 @@ h2 {
 
 .product-list {
     margin-top: 40px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.product-list li {
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .product-list li {
+        width: 33.3%;
+    }
+}
+
+.product-list li img {
+    border: 10px solid rgba(128, 1, 195, 0.45);
+    transition: border-color 0.3s ease-in-out;
+}
+
+.product-list li img:hover {
+    border: 10px solid rgba(128, 1, 195, 1)
 }
